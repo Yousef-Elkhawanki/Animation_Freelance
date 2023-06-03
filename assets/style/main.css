@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair:wght@300;400;500;600;700&display=swap");
 body {
-  font-family: "Roboto Slab", serif;
+  font-family: "Playfair", serif;
 }
 
 /* start loading page  */
@@ -16,6 +16,14 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.loading__container h6 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.loading__container span {
+  font-size: 2rem;
 }
 .welcome__message {
   text-transform: capitalize;
@@ -53,37 +61,37 @@ body {
 /* Start hero__banner  */
 .hero__banner {
   position: relative;
-  top: 30rem;
+  top: 50rem;
 }
 .hero__banner .container {
   position: relative;
 }
 .text__container {
-  position: relative;
-  top: 19rem;
-  font-size: 8rem;
-}
-
-.text__container::after {
-  content: "";
-
-  width: 100%;
-  height: 100%;
-  text-transform: capitalize;
   position: absolute;
-  z-index: 6;
-  opacity: 0;
-  transition: 0.5s;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  /* transition: 1s; */
 }
 
+.text__container h6 {
+  text-transform: capitalize;
+  font-size: 8rem;
+  opacity: 0;
+  transition: 2s;
+}
 .image__container {
   position: absolute;
   width: 45%;
   text-align: center;
+  margin: auto;
+  filter: opacity(60%);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.image__container:hover {
+  filter: opacity(100%);
 }
 .image__container:nth-child(1) {
   left: 0;
@@ -91,17 +99,39 @@ body {
   transform: translate(-0%, 0%);
   z-index: 1;
 }
+.image__container:nth-child(1) img:nth-child(1) {
+  width: 4rem;
+  position: absolute;
+  right: 25%;
+  top: 0;
+  transform: translate(-57%, 83%);
+}
 
 .image__container:nth-child(2) {
   left: 50%;
   top: 0%;
   transform: translate(-52%, 24%);
 }
+
+.image__container:nth-child(2) img:nth-child(1) {
+  width: 5rem;
+  position: absolute;
+  right: 16%;
+  top: 0;
+  transform: translate(-59%, -5%);
+}
 .image__container:nth-child(3) {
   right: 0;
   top: 0;
   transform: translate(-0%, 0%);
   z-index: -1;
+}
+.image__container:nth-child(3) img:nth-child(1) {
+  width: 10rem;
+  position: absolute;
+  right: 25%;
+  top: 0;
+  transform: translate(-57%, 83%);
 }
 .image__container:nth-child(4) {
   left: 27%;
@@ -118,17 +148,10 @@ body {
 .image__container:nth-child(5) img {
   width: 60%;
 }
-
 .image__container img {
   width: 100%;
-  margin: auto;
-  filter: opacity(60%) ;
-  transition: 0.5s;
-  cursor: pointer;
 }
-.image__container img:hover {
-  filter: opacity(100%);
-}
+
 /* End hero__banner  */
 
 /* Start Media Query  */
@@ -140,22 +163,55 @@ body {
 @media screen and (max-width: 992px) {
   .text__container {
     top: 10rem;
+  }
+  .text__container h6 {
     font-size: 5rem;
   }
   .navbar .logo__ span {
     font-size: 0.4rem;
   }
+  .image__container:nth-child(1) img:nth-child(1) {
+    width: 4rem;
+  }
+  .image__container:nth-child(2) img:nth-child(1) {
+    width: 4rem;
+  }
+  .image__container:nth-child(3) img:nth-child(1) {
+    width: 6rem;
+  }
 }
 @media screen and (max-width: 769px) {
   .text__container {
     top: 10rem;
+  }
+  .text__container h6 {
     font-size: 6rem;
+  }
+  .image__container:nth-child(1) img:nth-child(1) {
+    width: 3rem;
+  }
+  .image__container:nth-child(2) img:nth-child(1) {
+    width: 3rem;
+  }
+  .image__container:nth-child(3) img:nth-child(1) {
+    width: 5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .text__container {
     top: 10rem;
+  }
+  .text__container h6 {
     font-size: 6rem;
+  }
+  .image__container:nth-child(1) img:nth-child(1) {
+    width: 3rem;
+  }
+  .image__container:nth-child(2) img:nth-child(1) {
+    width: 3rem;
+  }
+  .image__container:nth-child(3) img:nth-child(1) {
+    width: 5rem;
   }
 }
 @media screen and (max-width: 430px) {
@@ -164,7 +220,30 @@ body {
   }
   .text__container {
     top: 5rem;
+  }
+  .text__container h6 {
     font-size: 2rem;
+  }
+  .image__container:nth-child(1) img:nth-child(1) {
+    width: 2rem;
+    position: absolute;
+    right: 25%;
+    top: 0;
+    transform: translate(-36%, 31%);
+  }
+  .image__container:nth-child(2) img:nth-child(1) {
+    width: 2rem;
+    position: absolute;
+    right: 9%;
+    top: 0;
+    transform: translate(-59%, -34%);
+  }
+  .image__container:nth-child(3) img:nth-child(1) {
+    width: 3rem;
+    position: absolute;
+    right: 26%;
+    top: 0;
+    transform: translate(-57%, 83%);
   }
 }
 /* End Media Query  */
