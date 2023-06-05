@@ -38,7 +38,7 @@ let counter_Interval = setInterval( function(){
                         $('.loading__page').remove()
                     $('.hero__banner').animate ({top:'0rem'} ,1000)
                 })
-                // $('body').css({'overflow':'auto'})
+                $('body').css({'overflow':'auto'})
             });
         })
     }
