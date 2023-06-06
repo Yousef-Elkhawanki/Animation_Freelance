@@ -279,7 +279,7 @@ body {
 
 @media screen and (max-width: 320px) {
   .welcome__message {
-    top: 37%;
+    top: 34%;
   }
   .welcome__message h1 {
     font-size: 2rem;
