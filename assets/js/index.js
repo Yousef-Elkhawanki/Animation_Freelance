@@ -36,7 +36,7 @@ let counter_Interval = setInterval( function(){
             $('.loading__container').fadeOut(1000 , ()=>{
                 $('.loading__page').slideUp(1000 , ()=>{
                         $('.loading__page').remove()
-                    $('.hero__banner').animate ({top:'0rem'} ,1000)
+                    $('.hero__banner').animate ({top:'0rem'} ,3000)
                 })
                 $('body').css({'overflow':'auto'})
             });
