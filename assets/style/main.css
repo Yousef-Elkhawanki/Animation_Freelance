@@ -228,7 +228,7 @@ body {
   }
   .text__container h6 {
     font-size: 6rem;
-    tranform:translate(-57%, -46%);
+    transform:translate(-57%, -46%);
   }
   .image__container:nth-child(1) img:nth-child(1) {
     width: 3rem;
