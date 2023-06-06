@@ -181,7 +181,7 @@ body {
 /* Start Media Query  */
 @media screen and (min-width: 1200px) {
   .text__container h6 {
-    transform: translate(-50%, 100%);
+    transform: translate(-50%, 120%);
   }
 }
 @media screen and (max-width: 992px) {
@@ -189,13 +189,14 @@ body {
     top: 10rem;
   }
   .welcome__message {
-    top: 26%;
+    top: 39%;
   }
   .welcome__message h1 {
     font-size: 6rem;
   }
   .text__container h6 {
     font-size: 5rem;
+    transform:translate(-61%,0);
   }
   .navbar .logo__ span {
     font-size: 0.4rem;
@@ -210,26 +211,14 @@ body {
     width: 5rem;
   }
 }
-@media screen and (max-width: 769px) {
-  .text__container {
-    top: 10rem;
-  }
-  .text__container h6 {
-    font-size: 6rem;
-  }
-  .image__container:nth-child(1) img:nth-child(1) {
-    width: 3rem;
-  }
-  .image__container:nth-child(2) img:nth-child(1) {
-    width: 3rem;
-  }
-  .image__container:nth-child(3) img:nth-child(1) {
-    width: 5rem;
-  }
-}
+
+
+
+
+
 @media screen and (max-width: 768px) {
   .welcome__message {
-    top: 27%;
+    top: 43%;
   }
   .welcome__message h1 {
     font-size: 6rem;
@@ -239,6 +228,7 @@ body {
   }
   .text__container h6 {
     font-size: 6rem;
+    tranform:translate(-57%, -46%);
   }
   .image__container:nth-child(1) img:nth-child(1) {
     width: 3rem;
@@ -250,12 +240,30 @@ body {
     width: 5rem;
   }
 }
+@media screen and (max-width: 600px) {
+.welcome__message {
+  top: 36% 
+    }
+
+
+
+
+
+.text__container h6 {
+
+    font-size: 6rem;
+  transform:translate(-55%,-80%);
+
+  }
+
+  }
 @media screen and (max-width: 430px) {
   .welcome__message {
-    top: 20%;
+    top: 32%;
   }
   .welcome__message h1 {
     font-size: 3rem;
+    transform:translate(-65%,-8%);
   }
   .text__container {
     top: 5rem;
@@ -279,7 +287,7 @@ body {
 
 @media screen and (max-width: 320px) {
   .welcome__message {
-    top: 37%;
+    top: 28%;
   }
   .welcome__message h1 {
     font-size: 2rem;
@@ -297,7 +305,7 @@ body {
     transform: translateY(-50%);
   }
   .text__container h6 {
-    transform: translate(-50%, -60%);
+    transform: translate(-60%, -60%);
   }
 }
 /* End Media Query  */
