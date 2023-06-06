@@ -263,13 +263,14 @@ body {
   }
   .welcome__message h1 {
     font-size: 3rem;
-    transform:translate(-65%,-8%);
+    
   }
   .text__container {
     top: 5rem;
   }
   .text__container h6 {
     font-size: 2rem;
+    transform:translate(-65%,-8%);
   }
   .image__container:nth-child(1) img:nth-child(1) {
     width: 2rem;
