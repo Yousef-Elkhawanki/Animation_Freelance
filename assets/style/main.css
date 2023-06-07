@@ -36,7 +36,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -176,6 +176,56 @@ body {
   width: 100%;
 }
 
+/* Start animation__page  */
+.animation__page {
+  width: 0;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: none;
+  filter: opacity(80%);
+  position: relative;
+}
+.animation__page .overlay {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+@font-face {
+  font-family: "dramaturg";
+  src: url(../webfonts/Dramaturg.otf);
+}
+.animation__text h1 {
+  display: none;
+}
+.animation__text h2 {
+  font-family: "dramaturg";
+  color: #b06c4a;
+  font-size: 10rem;
+  display: none;
+}
+.animation__text p {
+  display: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.backIcon {
+  position: absolute;
+  right: 1rem;
+  font-weight: lighter;
+}
+
+.backIcon i {
+  animation: back_icon 1s infinite alternate;
+}
+@keyframes back_icon {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-0.4rem);
+  }
+}
 /* End hero__banner  */
 
 /* Start Media Query  */
@@ -196,7 +246,7 @@ body {
   }
   .text__container h6 {
     font-size: 5rem;
-    transform:translate(-61%,0);
+    transform: translate(-61%, 0);
   }
   .navbar .logo__ span {
     font-size: 0.4rem;
@@ -212,10 +262,6 @@ body {
   }
 }
 
-
-
-
-
 @media screen and (max-width: 768px) {
   .welcome__message {
     top: 43%;
@@ -228,7 +274,7 @@ body {
   }
   .text__container h6 {
     font-size: 6rem;
-    transform:translate(-57%, -46%);
+    transform: translate(-57%, -46%);
   }
   .image__container:nth-child(1) img:nth-child(1) {
     width: 3rem;
@@ -241,36 +287,28 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
-.welcome__message {
-  top: 36% 
-    }
+  .welcome__message {
+    top: 36%;
+  }
 
-
-
-
-
-.text__container h6 {
-
+  .text__container h6 {
     font-size: 6rem;
-  transform:translate(-55%,-80%);
-
+    transform: translate(-55%, -80%);
   }
-
-  }
+}
 @media screen and (max-width: 430px) {
   .welcome__message {
     top: 32%;
   }
   .welcome__message h1 {
     font-size: 3rem;
-    
   }
   .text__container {
     top: 5rem;
   }
   .text__container h6 {
     font-size: 2rem;
-    transform:translate(-65%,-8%);
+    transform: translate(-65%, -8%);
   }
   .image__container:nth-child(1) img:nth-child(1) {
     width: 2rem;
